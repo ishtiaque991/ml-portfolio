@@ -6,10 +6,11 @@ import Projects from './components/Projects';
 import CvResume from './components/CvResume';
 import Contact from './components/Contact';
 import BackToTop from './components/BackToTop';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Home />
       <About />
@@ -18,8 +19,10 @@ function App() {
       <CvResume />
       <Contact />
       <BackToTop />
-    </div>
+      <Analytics />
+    </>
   );
 }
 
 export default App;
+
