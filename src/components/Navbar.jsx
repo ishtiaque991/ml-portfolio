@@ -4,6 +4,9 @@ import ThemeToggle from './ThemeToggle';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  // Helper for closing mobile menu on link click
+  const handleMobileLinkClick = () => setOpen(false);
+
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
@@ -23,6 +26,9 @@ const Navbar = () => {
           >
             Resume
           </a>
+        </div>
+        {/* ThemeToggle always visible */}
+        <div className="ml-4">
           <ThemeToggle />
         </div>
         {/* Mobile menu toggle */}
@@ -33,25 +39,25 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-white dark:bg-gray-900 px-4 pb-4 space-y-2">
-          <a href="#about" className="nav-link block">About</a>
-          <a href="#skills" className="nav-link block">Skills</a>
-          <a href="#projects" className="nav-link block">Projects</a>
-          <a href="#contact" className="nav-link block">Contact</a>
+          <a href="#about" className="nav-link block" onClick={handleMobileLinkClick}>About</a>
+          <a href="#skills" className="nav-link block" onClick={handleMobileLinkClick}>Skills</a>
+          <a href="#projects" className="nav-link block" onClick={handleMobileLinkClick}>Projects</a>
+          <a href="#contact" className="nav-link block" onClick={handleMobileLinkClick}>Contact</a>
           <a
-            href="/resume.pdf"
+            href="/sqaresume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded-md font-semibold hover:from-blue-700 hover:to-purple-700 shadow transition"
+            className="inline-flex items-center mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1.5 rounded font-semibold hover:from-blue-700 hover:to-purple-700 shadow transition"
+            onClick={handleMobileLinkClick}
           >
             Resume
           </a>
-          <ThemeToggle />
         </div>
       )}
       <style>{`
         .nav-link {
           color: #1e293b;
-          font-weight: 600; /* Added for semi-bold */
+          font-weight: 600;
           transition: color 0.2s;
         }
         .dark .nav-link {

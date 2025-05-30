@@ -1,3 +1,4 @@
+import React from 'react';
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -10,7 +11,7 @@ const Contact = () => (
       </p>
       <div className="flex justify-center space-x-6 mb-6">
         <a
-          href="mailto:ishtiaquek392@gmail.com"
+          href="mailto:ishtiaqueislam987@gmail.com"
           className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow hover:scale-105 transition"
         >
           <MdEmail className="w-6 h-6" /> Email Me

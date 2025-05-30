@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Test Case for E-Passport Contact Form",
     description: "A set of detailed manual test cases for the E-Passport contact form, covering positive, negative, and boundary scenarios to ensure robust form validation and user experience.",
-    github: "https://github.com/ishtiaque991/Test-Case-for-E-Passport-contact-form",
+    github: "https://github.com/ishtiaque991/Test-Case-for-E-Passport-contact-form.",
     demo: ""
   },
   {
@@ -63,6 +63,17 @@ const Projects = () => (
             </div>
           </div>
         ))}
+      </div>
+      {/* Browse More Button */}
+      <div className="flex justify-center mt-8">
+        <a
+          href="https://github.com/ishtiaque991?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-md font-semibold shadow hover:from-blue-700 hover:to-purple-700 transition"
+        >
+          Browse More Projects on GitHub
+        </a>
       </div>
     </div>
   </section>
