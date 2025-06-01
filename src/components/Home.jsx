@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePic from '../assets/bgremove.png';
+import profilePic from '../assets/formal.jpg';
 
 const Home = () => (
   <section
